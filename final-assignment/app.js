@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Add session support
 app.use(session({
-  secret: 'jarnojaimie', // CHANGE THIS!!!
+  secret: 'jarnojaimie',
   store: new FileStore(),
   saveUninitialized: true,
   resave: false
