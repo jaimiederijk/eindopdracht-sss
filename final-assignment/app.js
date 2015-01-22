@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var mysql = require('mysql');
 var myConnection = require('express-myconnection');
+var userRoutes = require('./routers/users');
 
 //  =================
 //  = Setup the app =
@@ -61,6 +62,8 @@ var testRouter = require('./routers/test');
 
 
 app.use('/test', testRouter);
+
+app.use('/users', userRoutes);
 
 // This should be the ONLY route in this file!
 app.get('/', function(req, res){

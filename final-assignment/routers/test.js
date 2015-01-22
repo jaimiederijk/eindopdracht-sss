@@ -9,6 +9,7 @@ router.get('/', function(req, res, next){
     connection.query('SELECT * FROM users', function(err, users){
       if(err){ return next(err); }
       res.render('test/index', {users: users});
+      console.log(users);
     });
   });
 
