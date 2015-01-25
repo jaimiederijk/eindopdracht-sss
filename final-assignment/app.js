@@ -7,6 +7,7 @@ var multer = require('multer');
 var mysql = require('mysql');
 var myConnection = require('express-myconnection');
 var userRoutes = require('./routers/users');
+var uploadRoutes = require('./routers/upload');
 
 //  =================
 //  = Setup the app =
@@ -28,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Add session support
 app.use(session({
-  secret: 'jarnojaimie',
+  secret: '...',
   store: new FileStore(),
   saveUninitialized: true,
   resave: false
@@ -39,7 +40,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Setup Multer
 app.use(multer({
-  dest: './uploads/'
+  dest: __dirname + '/public/uploads'
 }));
 
 // Setup MySQL
@@ -48,7 +49,7 @@ app.use(multer({
 var dbOptions = {
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'sqlhostpass',
   database: 'sss-final'
 };
 
@@ -64,6 +65,8 @@ var testRouter = require('./routers/test');
 app.use('/test', testRouter);
 
 app.use('/users', userRoutes);
+
+app.use('/upload', uploadRoutes);
 
 // This should be the ONLY route in this file!
 app.get('/', function(req, res){

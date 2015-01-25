@@ -1,0 +1,8 @@
+<% include ../partials/header %>
+<h1>Photos</h1>
+
+<% files.forEach(function (file){ %>
+	<li> <img src= "<%= "http://localhost:3000/uploads/" + file %>"> </li>
+<% }) %>
+
+<% include ../partials/footer %>

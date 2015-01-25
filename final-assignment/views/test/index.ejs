@@ -1,8 +1,15 @@
-<h1>Hello world</h1>
+<% include ../partials/header %>
+
+<h1><%= user %></h1>
 
 <h2>Users in database</h2>
 <pre>
 <%= JSON.stringify(users, null, "  ") %>
 </pre>
 
-<a href="../users">Login</a>
+
+<a href="../users"><%= userLog %></a>
+<a href="../upload">upload</a>
+<a href="../upload/showuploads">Photos</a>
+
+<% include ../partials/footer %>
