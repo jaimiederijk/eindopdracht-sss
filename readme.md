@@ -1,12 +1,21 @@
-#eindopdracht server side scripting
+# Server-side scripting in node.js -- Final Assignment Base Application
 
-EINDOPDRACHT (SAMENGEVAT)
-Maak een foto-deel applicatie waar je op kunt inloggen, foto's kunt uploaden als je ingelogd bent. Andere gebruikers die niet hoeven in te loggen moeten commentaar op een foto kunnen plaatsen.
+This is the basic application with which you can create your final assignment.
 
-Uploaden
+## Getting started
 
-Formulieren met POST
+* [Download this base application]().
+* Run ```npm install``` to install the dependencies.
 
-Sessie (bijv. Login)
+## Included
 
-Gebruik database (select/insert/update)
+* Node.js basic application with all required dependencies (express-session, body-parser, multer, MySQL, express-myconnection, etc.)
+* Basic database (see `database/database.sql`).
+
+## Database
+The base database should be enough to create the bare minimum application required. The database includes 3 tables; users, photos and comments:
+
+![Datamodel](database/model.png?raw=true)
+
+## Session
+There is one minor difference between the excersises and this assignment in session handling. Sessions will not be removed when the application restarts. Delete the contents of the `sessions` directory to remove all sessions.
