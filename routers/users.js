@@ -55,5 +55,21 @@ router.get("/signup",function(req,res){
 	res.render("users/signup");
 });
 
+router.post("/signup", function(req, res, next){
+	req.getConnection(function(err, connection){
+		if(err){ next(err); }
+
+		connection.query("INSERT INTO users (name, password) VALUES (?)", [[req.body.name, req.body.password]], function(err, records){
+			if(err){ next(err); }
+
+			if(records.affectedRows == 1){
+				res.redirect("/users");
+			} else {
+				res.render("users/signup", {req: req});
+			}
+		});
+	})
+});
+
 	
 module.exports = router;
