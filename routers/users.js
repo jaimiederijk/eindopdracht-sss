@@ -3,6 +3,7 @@
 var express = require('express');
 var router =  express.Router();
 
+
 router.get("/", function(req, res) {
 	if(req.session.username){
 		res.redirect("/users/profiel");
@@ -50,4 +51,9 @@ router.get("/logout",function(req,res){
 	delete req.session.username;
 	res.render('users/logout');
 });
+router.get("/signup",function(req,res){
+	res.render("users/signup");
+});
+
+	
 module.exports = router;

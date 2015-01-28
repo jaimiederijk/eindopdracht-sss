@@ -3,109 +3,22 @@
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.35
+3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 warn package.json final-assignment@0.0.0 No repository field.
-6 verbose readDependencies using package.json deps
-7 verbose install where, deps [ 'C:\\Users\\jaimie\\documents\\github\\eindopdracht-sss',
-7 verbose install   [ 'body-parser',
-7 verbose install     'ejs',
-7 verbose install     'express',
-7 verbose install     'express-myconnection',
-7 verbose install     'express-session',
-7 verbose install     'multer',
-7 verbose install     'mysql',
-7 verbose install     'fs',
-7 verbose install     'session-file-store' ] ]
-8 info preinstall final-assignment@0.0.0
-9 warn package.json fs@0.0.2 fs is also the name of a node core module.
-10 warn package.json fs@0.0.2 No description
-11 warn package.json fs@0.0.2 No repository field.
-12 warn package.json fs@0.0.2 No README data
-13 verbose readDependencies using package.json deps
-14 verbose already installed skipping body-parser@^1.10.1 C:\Users\jaimie\documents\github\eindopdracht-sss
-15 verbose already installed skipping ejs@^2.0.8 C:\Users\jaimie\documents\github\eindopdracht-sss
-16 verbose already installed skipping express@^4.10.7 C:\Users\jaimie\documents\github\eindopdracht-sss
-17 verbose already installed skipping express-myconnection@^1.0.4 C:\Users\jaimie\documents\github\eindopdracht-sss
-18 verbose already installed skipping express-session@^1.10.1 C:\Users\jaimie\documents\github\eindopdracht-sss
-19 verbose already installed skipping multer@^0.1.6 C:\Users\jaimie\documents\github\eindopdracht-sss
-20 verbose already installed skipping mysql@^2.5.4 C:\Users\jaimie\documents\github\eindopdracht-sss
-21 verbose cache add [ 'fs@^0.2.0', null ]
-22 verbose cache add name=undefined spec="fs@^0.2.0" args=["fs@^0.2.0",null]
-23 verbose parsed url { protocol: null,
-23 verbose parsed url   slashes: null,
-23 verbose parsed url   auth: null,
-23 verbose parsed url   host: null,
-23 verbose parsed url   port: null,
-23 verbose parsed url   hostname: null,
-23 verbose parsed url   hash: null,
-23 verbose parsed url   search: null,
-23 verbose parsed url   query: null,
-23 verbose parsed url   pathname: 'fs@^0.2.0',
-23 verbose parsed url   path: 'fs@^0.2.0',
-23 verbose parsed url   href: 'fs@^0.2.0' }
-24 verbose already installed skipping session-file-store@0.0.2 C:\Users\jaimie\documents\github\eindopdracht-sss
-25 verbose cache add name="fs" spec="^0.2.0" args=["fs","^0.2.0"]
-26 verbose parsed url { protocol: null,
-26 verbose parsed url   slashes: null,
-26 verbose parsed url   auth: null,
-26 verbose parsed url   host: null,
-26 verbose parsed url   port: null,
-26 verbose parsed url   hostname: null,
-26 verbose parsed url   hash: null,
-26 verbose parsed url   search: null,
-26 verbose parsed url   query: null,
-26 verbose parsed url   pathname: '^0.2.0',
-26 verbose parsed url   path: '^0.2.0',
-26 verbose parsed url   href: '^0.2.0' }
-27 verbose addNamed [ 'fs', '^0.2.0' ]
-28 verbose addNamed [ null, '>=0.2.0-0 <0.3.0-0' ]
-29 silly lockFile 8aee9eeb-fs-0-2-0 fs@^0.2.0
-30 verbose lock fs@^0.2.0 C:\Users\jaimie\AppData\Roaming\npm-cache\8aee9eeb-fs-0-2-0.lock
-31 silly addNameRange { name: 'fs', range: '>=0.2.0-0 <0.3.0-0', hasData: false }
-32 verbose request where is /fs
-33 verbose request registry https://registry.npmjs.org/
-34 verbose request id eb94fa7002b008c5
-35 verbose url raw /fs
-36 verbose url resolving [ 'https://registry.npmjs.org/', './fs' ]
-37 verbose url resolved https://registry.npmjs.org/fs
-38 verbose request where is https://registry.npmjs.org/fs
-39 info trying registry request attempt 1 at 16:41:49
-40 verbose etag "HT8S9VX9J99B7DAQ13Q5WS75"
-41 http GET https://registry.npmjs.org/fs
-42 http 304 https://registry.npmjs.org/fs
-43 silly registry.get cb [ 304,
-43 silly registry.get   { date: 'Tue, 27 Jan 2015 15:41:49 GMT',
-43 silly registry.get     server: 'Apache',
-43 silly registry.get     via: '1.1 varnish',
-43 silly registry.get     'last-modified': 'Tue, 27 Jan 2015 15:41:50 GMT',
-43 silly registry.get     'cache-control': 'max-age=60',
-43 silly registry.get     etag: '"HT8S9VX9J99B7DAQ13Q5WS75"',
-43 silly registry.get     age: '0',
-43 silly registry.get     'x-served-by': 'cache-fra1244-FRA',
-43 silly registry.get     'x-cache': 'HIT',
-43 silly registry.get     'x-cache-hits': '1',
-43 silly registry.get     'x-timer': 'S1422373309.446147,VS0,VE712',
-43 silly registry.get     vary: 'Accept',
-43 silly registry.get     'content-length': '0',
-43 silly registry.get     'keep-alive': 'timeout=10, max=50',
-43 silly registry.get     connection: 'Keep-Alive' } ]
-44 verbose etag https://registry.npmjs.org/fs from cache
-45 silly addNameRange number 2 { name: 'fs', range: '>=0.2.0-0 <0.3.0-0', hasData: true }
-46 silly addNameRange versions [ 'fs', [ '0.0.0', '0.0.2' ] ]
-47 silly lockFile 8aee9eeb-fs-0-2-0 fs@^0.2.0
-48 silly lockFile 8aee9eeb-fs-0-2-0 fs@^0.2.0
-49 error notarget No compatible version found: fs@'>=0.2.0-0 <0.3.0-0'
-49 error notarget Valid install targets:
-49 error notarget ["0.0.0","0.0.2"]
-49 error notarget
-49 error notarget This is most likely not a problem with npm itself.
-49 error notarget In most cases you or one of your dependencies are requesting
-49 error notarget a package version that doesn't exist.
-50 error System Windows_NT 6.1.7601
-51 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-52 error cwd C:\Users\jaimie\documents\github\eindopdracht-sss
-53 error node -v v0.10.35
-54 error npm -v 1.4.28
-55 error code ETARGET
-56 verbose exit [ 1, true ]
+5 error install Couldn't read dependencies
+6 error Failed to parse json
+6 error Unexpected token /
+7 error File: C:\Users\jaimie laptop\documents\github\eindopdracht-sss\package.json
+8 error Failed to parse package.json data.
+8 error package.json must be actual JSON, not just JavaScript.
+8 error
+8 error This is not a bug in npm.
+8 error Tell the package author to fix their package.json file. JSON.parse
+9 error System Windows_NT 6.1.7601
+10 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+11 error cwd C:\Users\jaimie laptop\documents\github\eindopdracht-sss
+12 error node -v v0.10.33
+13 error npm -v 1.4.28
+14 error file C:\Users\jaimie laptop\documents\github\eindopdracht-sss\package.json
+15 error code EJSONPARSE
+16 verbose exit [ 1, true ]
