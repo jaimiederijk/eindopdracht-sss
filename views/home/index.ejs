@@ -3,18 +3,15 @@
 <h1><%= user %></h1>
 
 <h2>Users in database</h2>
+
 <pre>
-<%= JSON.stringify(users, null, "  ") %>
+	<%= JSON.stringify(users, null, "  ") %>
 </pre>
 
-  	<% if (userLog=="Login") {%>
-		<a href="../users/login">login</a>
-		<a href="../users/signup">signup</a>
-	<% }	if (userLog=="Logout") {  %>
-		<a href="../users/logout">logout</a>
-
-		<%};%>
-<a href="../upload">upload</a>
-<a href="../upload/showuploads">Photos</a>
+<section>
+	<a href="../users"><%= userLog %></a>
+	<a href="../upload">upload</a>
+	<a href="../upload/showuploads">Photos</a>
+</section>
 
 <% include ../partials/footer %>

@@ -73,9 +73,6 @@ app.get('/', function(req, res){
   res.redirect('/home');
 });
 
-
-
-
 //  =================
 //  = Start the app =
 //  =================
