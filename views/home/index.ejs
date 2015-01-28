@@ -7,15 +7,13 @@
 <%= JSON.stringify(users, null, "  ") %>
 </pre>
 
-<% if (userLog=="Login") {%>
-	<a href="../users/login"><%= userLog %></a>
-	<a href="../users/signup">signup</a>
-<% };	if (userLog=="Logout") {%>
-	<a href="../users/logout"><%= userLog %></a>
+  	<% if (userLog=="Login") {%>
+		<a href="../users/login">login</a>
+		<a href="../users/signup">signup</a>
+	<% }	if (userLog=="Logout") {  %>
+		<a href="../users/logout">logout</a>
 
-<%}%>
-	
-
+		<%};%>
 <a href="../upload">upload</a>
 <a href="../upload/showuploads">Photos</a>
 

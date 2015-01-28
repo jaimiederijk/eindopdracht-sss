@@ -59,10 +59,10 @@ app.use(myConnection(mysql, dbOptions, 'single'));
 //  ===========
 //  = Routers =
 //  ===========
-var testRouter = require('./routers/test');
+var testRouter = require('./routers/index');
 
 
-app.use('/test', testRouter);
+app.use('/home', testRouter);
 
 app.use('/users', userRoutes);
 
@@ -70,8 +70,11 @@ app.use('/upload', uploadRoutes);
 
 // This should be the ONLY route in this file!
 app.get('/', function(req, res){
-  res.redirect('/test');
+  res.redirect('/home');
 });
+
+
+
 
 //  =================
 //  = Start the app =
