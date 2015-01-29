@@ -7,6 +7,7 @@ var router =  express.Router();
 var user;
 
 router.get('/', function(req, res,next) {
+
 	if (req.session.username) {
 		
 
@@ -20,7 +21,9 @@ router.get('/', function(req, res,next) {
 			});
 		});
 
-		res.render('upload/form');
+		res.render('upload/form',{
+			req:req
+		});
 	}
 	else {
 		res.redirect("/users/login");
@@ -65,11 +68,16 @@ router.get('/showuploads', function (req, res){
 			res.send('Cannot access directory');
 		}
 		res.render('upload/index',{
-			files: files
+			files: files,
+			req:req
 		});
 	});
 	console.log(req.body.file)
 });
+
+
+
+
 router.post("/showuploads",function(req,res){
 	
 

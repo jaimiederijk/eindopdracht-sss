@@ -5,6 +5,7 @@ var router =  express.Router();
 
 
 router.get("/", function(req, res) {
+	req:req
 	if(req.session.username){
 		res.redirect("/users/profiel");
 		
@@ -15,7 +16,7 @@ router.get("/", function(req, res) {
 });
 
 router.get('/login', function(req, res) {
-	res.render('users/login');
+	res.render('users/login',{req:req});
 });
 
 router.post('/login', function(req, res){
@@ -41,7 +42,9 @@ router.post('/login', function(req, res){
 router.get("/profiel",function(req,res){
 	if (req.session.username) {
 		user=req.session.username;
-		res.render('users/profiel');
+		res.render('users/profiel',{
+			req:req
+		});
 	}
 	else {
 		res.redirect(req.baseUrl + '/');
@@ -49,10 +52,14 @@ router.get("/profiel",function(req,res){
 });
 router.get("/logout",function(req,res){
 	delete req.session.username;
-	res.render('users/logout');
+	res.render('users/logout',{
+		req:req
+	});
 });
 router.get("/signup",function(req,res){
-	res.render("users/signup");
+	res.render("users/signup",{
+		req:req
+	});
 });
 
 router.post("/signup", function(req, res, next){

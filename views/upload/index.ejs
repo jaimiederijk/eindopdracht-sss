@@ -2,11 +2,11 @@
 
 <h1>Photos</h1>
 
-<% files.forEach(function (file){ %>
+<% files.forEach(function (file, index){ %>
 	<li> <img class="imageupload" src= "<%= "/uploads/" + file %>"> </li>
 	<h1>comments</h1>
 
-	<form method="post" action="/users/login">
+	<form method="post" action="<% req.baseUrl %>/<% photo.photoId %>/comment">
 	    <label>comments</label>
 	    
 	    <textarea name="comment" >Enter text here...</textarea>

@@ -6,6 +6,17 @@
   </head>
   <body>
   	<header>
-  		<a href="../home">Home</a>	
+  		<a href="../home">Home</a>
+  		<a href="../upload/showuploads">Photos</a>
+  		<% if (req.session.username) { %>
+  			
+  			<a href="../users/logout">logout</a>
+  		<% } else { %>
+  			<a href="../users/login">login</a>
+  			<a href="../users/signup">Sign up</a>
+  		<% } %>
+  			
+  		
+  			
 
   	</header>
