@@ -65,15 +65,21 @@ section a:first-of-type {
 	top: 30px;
 	z-index: 1;
 }
-section a:nth-of-type(2) {
+section a:nth-of-type(3) {
 	position: absolute;
 	left: 210px;
 	top: 30px;
 	z-index: 1;
 }
-section a:last-of-type {
+section a:nth-of-type(2) {
 	position: absolute;
 	left: 310px;
+	top: 30px;
+	z-index: 1;
+}
+section a:last-of-type {
+	position: absolute;
+	left: 410px;
 	top: 30px;
 	z-index: 1;
 }
