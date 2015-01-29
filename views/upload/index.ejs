@@ -3,7 +3,16 @@
 <h1>Photos</h1>
 
 <% files.forEach(function (file){ %>
-	<li> <img src= "<%= "http://localhost:3000/uploads/" + file %>"> </li>
+	<li> <img src= "<%= "/uploads/" + file %>"> </li>
+	<h1>comments</h1>
+
+	<form method="post" action="/users/login">
+	    <label>comments</label>
+	    
+	    <textarea name="comment" >Enter text here...</textarea>
+	    <input type="submit" value="login">
+	</form>
+
 <% }) %>
 
 <% include ../partials/footer %>
