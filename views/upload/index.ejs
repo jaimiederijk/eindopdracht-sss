@@ -4,15 +4,15 @@
 
 <% files.forEach(function (file, index){ %>
 <div class="photo">
-	<li> <img class="imageupload" src= "<%= "/uploads/" + file %>"> </li>
-	<h1>comments</h1>
+	<img class="imageupload" src= "<%= "/uploads/" + file %>">
+	<h2>Comments</h2>
 
-	<form class ="formcomment"method="post" action="<% req.baseUrl %>/<% photo.photoId %>/comment">
-	    <label>comments</label>
+	<form class ="formcomment"method="post" action="/uploads/showuploads">
 	    
-	    <textarea name="comment" >Enter text here...</textarea>
-	    <input type="submit" value="login">
+	<textarea name="comment" >Enter text here...</textarea>
+	<input type="submit" value="Post comment">
 	</form>
 </div>
+<% }); %>
 
 <% include ../partials/footer %>

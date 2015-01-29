@@ -7,7 +7,7 @@ var router =  express.Router();
 router.get("/", function(req, res) {
 	req:req
 	if(req.session.username){
-		res.redirect("/users/profiel");
+		res.redirect("../upload/showuploads");
 		
 		// res.send("welcome, " + req.session.username);
 	} else {
