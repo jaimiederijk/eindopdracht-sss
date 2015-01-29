@@ -71,26 +71,8 @@ router.get('/showuploads', function (req, res){
 	console.log(req.body.file)
 });
 router.post("/showuploads",function(req,res){
-	photoId;
-	date=new date();
-	req.getConnection(function(err, connection){
-		if(err){ next(err); }
-
-		connection.query("SELECT id FROM photos WHERE id=(?)", [req.session.username], function(err, records){
-			if(err){ next(err); }
-
-			photoId =   records[0].id;
-		});
-	});
-
-	req.getConnection(function(err, connection){
-		if(err){ next(err); }
-
-		connection.query("INSERT INTO comments (photo_id, created_at ,comment) VALUES (?)", [[photoId,date,req.body.comment]], function(err, records){
-		if(err){ next(err); }
+	
 
 
-
-	});
 })
 module.exports = router;

@@ -3,7 +3,7 @@
 <h1>Photos</h1>
 
 <% files.forEach(function (file){ %>
-	<li> <img src= "<%= "/uploads/" + file %>"> </li>
+	<li> <img class="imageupload" src= "<%= "/uploads/" + file %>"> </li>
 	<h1>comments</h1>
 
 	<form method="post" action="/users/login">
