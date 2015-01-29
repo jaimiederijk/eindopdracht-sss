@@ -3,16 +3,16 @@
 <h1>Photos</h1>
 
 <% files.forEach(function (file, index){ %>
+<div class="photo">
 	<li> <img class="imageupload" src= "<%= "/uploads/" + file %>"> </li>
 	<h1>comments</h1>
 
-	<form method="post" action="<% req.baseUrl %>/<% photo.photoId %>/comment">
+	<form class ="formcomment"method="post" action="<% req.baseUrl %>/<% photo.photoId %>/comment">
 	    <label>comments</label>
 	    
 	    <textarea name="comment" >Enter text here...</textarea>
 	    <input type="submit" value="login">
 	</form>
-
-<% }) %>
+</div>
 
 <% include ../partials/footer %>
