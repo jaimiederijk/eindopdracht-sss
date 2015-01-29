@@ -1,9 +1,13 @@
 <% include ../partials/header %>
 
-<p>Hallo <%= user %></p>
+<h1>Hallo <%= user %></h1>
 
-<a href="../upload">upload a photo</a>
+<div class="profiel_logout">
+	<a href="../users/logout">logout</a>
+</div>
 
-<a href="../users/logout">logout</a>
+<div class="profiel_link">
+	<a href="../upload">upload a photo</a>
+</div>
 
 <% include ../partials/footer %>
